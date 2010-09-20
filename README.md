@@ -5,14 +5,10 @@
  2. Install/setup [sbt].
 
  3. Build backend code:
-
-  `$ cd mongolog`
-
-  `$ sbt`
-
-  `$ update`
-
-  `$ package`
+    $ cd mongolog
+    $ sbt
+    $ update
+    $ package
 
  4. Run [mongod].
 

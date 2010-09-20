@@ -6,21 +6,28 @@ import net.liftweb.json.JsonAST._
 import net.liftweb.json.JsonDSL._
 import net.liftweb.json.Extraction._
 
-object Posts {
+object Posts extends Storable {
   if (!MongoRepo.isConfigured) MongoRepo.setup
 
   implicit val formats = DefaultFormats.lossless
 
-  def create(json: String) = {
+  override def create(json: String) = {
     MongoDB.useCollection(Post.collectionName)(coll => {
             coll.save(JObjectParser.parse(JsonParser.parse(json)
                     .asInstanceOf[JObject]))
     })
   }
 
-  def get(id: String) = pretty(render(decompose(Post.find(("_id" -> id)).get)))
+  // TODO: impl.
+  override def update(json: String) = None
 
-  def all() = pretty(render(decompose(Post.findAll)))
+  // TODO: impl.
+  override def delete(json: String) = None
+
+  override def get(id: String) =
+          pretty(render(decompose(Post.find(("_id" -> id)).get)))
+
+  override def all() = pretty(render(decompose(Post.findAll)))
 }
 
 case class Post(_id: String, body: String) extends MongoDocument[Post] {

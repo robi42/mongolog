@@ -1,21 +1,23 @@
 # Howto
 
- 1. Install/setup sbt[1].
+ 1. Get Scala 2.7.7.
 
- 2. Build backend code:
+ 2. Install/setup [sbt].
 
-  $ cd mongolog
-  $ sbt
-  $ update
-  $ package
+ 3. Build backend code:
 
- 3. Run mongod[2].
+    $ cd mongolog
+    $ sbt
+    $ update
+    $ package
 
- 4. Launch Ringo[3] app in `./ringo-app/`.
+ 4. Run [mongod].
 
- 5. Happy hacking! :)
+ 5. Launch [Ringo] app in `./ringo-app/`.
+
+ 6. Happy hacking! :)
 
 
-  [1]: http://code.google.com/p/simple-build-tool/
-  [2]: http://www.mongodb.org/
-  [3]: http://ringojs.org/
+  [sbt]: http://code.google.com/p/simple-build-tool/
+  [mongod]: http://www.mongodb.org/
+  [Ringo]: http://ringojs.org/

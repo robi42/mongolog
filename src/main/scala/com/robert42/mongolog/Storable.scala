@@ -5,7 +5,7 @@ trait Storable {
 
   def update(json: String)
 
-  def delete(json: String)
+  def remove(json: String)
 
   def get(id: String): String
 

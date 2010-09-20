@@ -2,8 +2,9 @@
 
  1. Install/setup sbt[1].
 
- 2. Build backend code.
+ 2. Build backend code:
 
+  $ cd mongolog
   $ sbt
   $ update
   $ package

@@ -33,6 +33,7 @@ object Posts extends Storable {
 case class Post(_id: String, body: String) extends MongoDocument[Post] {
   def meta = Post
 }
+
 object Post extends MongoDocumentMeta[Post] {
   override val collectionName = "posts"
 

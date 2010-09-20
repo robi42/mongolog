@@ -15,5 +15,8 @@
 
 <% subskin post %>
 <p>
-  <a href="/show/<% post._id %>"><% index %></a>: <% post.body %>
+  <strong>
+    <a href="/show/<% post._id %>">#<% index %></a>:
+  </strong>
+  <% post.body %>
 </p>

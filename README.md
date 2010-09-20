@@ -6,13 +6,13 @@
 
  3. Build backend code:
 
-  $ cd mongolog
+  `$ cd mongolog`
 
-  $ sbt
+  `$ sbt`
 
-  $ update
+  `$ update`
 
-  $ package
+  `$ package`
 
  4. Run [mongod].
 

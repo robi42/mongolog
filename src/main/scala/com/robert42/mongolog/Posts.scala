@@ -22,7 +22,7 @@ object Posts extends Storable {
   override def update(json: String) = None
 
   // TODO: impl.
-  override def delete(json: String) = None
+  override def remove(json: String) = None
 
   override def get(id: String) =
           pretty(render(decompose(Post.find(("_id" -> id)).get)))
